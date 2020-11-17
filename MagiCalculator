@@ -1,0 +1,22 @@
+import java.math.*;
+public class MagiCalculator extends Calculator {
+	public double squareRoot(double squared) {
+		return Math.sqrt(squared);
+	}
+	public double sine(double s) {
+		return Math.sin(s);
+	}
+	public double cosine(double c) {
+		return Math.cos(c);
+	}
+	public double tangent(double t) {
+		return Math.tan(t);
+	}
+	public double factorial(double f){
+		double total = f;
+		for (double i= 0; i<f; i++) {
+			total*(f-i);
+		}
+		return total;
+	}
+}
