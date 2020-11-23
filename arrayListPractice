@@ -1,0 +1,51 @@
+import java.util.*;
+public class arrayListPractice {
+	
+	public int listSum(ArrayList<Integer> list) {
+		int temp=0;
+		for (int i = 0; i < list.size(); i++) {
+			temp+=list.get(i);
+		}
+		return temp;
+	}
+	public int listProduct(ArrayList<Integer> list) {
+		int temp=1;
+		for (int i = 0; i < list.size(); i++) {
+			temp*=list.get(i);
+		}
+		return temp;
+	}
+	public int largest(ArrayList<Integer> list) {
+		int large=-10000000;
+		for (int i = 0; i < list.size(); i++) {
+			if (large < list.get(i)) {
+				large = list.get(i);
+			}
+		}
+		return large;
+	}
+	public int smallest(ArrayList<Integer> list) {
+		int smallest=100000000;
+		for (int i = 0; i < list.size(); i++) {
+			if (smallest > list.get(i)) {
+				smallest = list.get(i);
+			}
+		}
+		return smallest;
+	}
+public static void main(String[] args) {
+	ArrayList<Integer> list = new ArrayList<Integer>();
+	Scanner scanner = new Scanner(System.in);
+	for (int i = 0; i < 5; i++) {
+		System.out.println("Please enter a number:");
+		list.add(scanner.nextInt());
+	}
+	System.out.println(this.listSum(list));
+	System.out.println(this.listProduct(list));
+	System.out.println(this.largest(list));
+	System.out.println(this.smallest(list));
+	
+}
+	
+
+}
